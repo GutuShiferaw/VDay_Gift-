@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-cont {
+    background-image: url('./assets/images/background.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.typing-text {
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 4s steps(20, end) 2; 
+  }
+  .typing-text2 {
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 4s steps(20, end) 2; 
+  }
+  .typing-text3 {
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 4s steps(20, end) 2; 
+  }
+
+  .popup {
+    animation: fadeIn 1s ease-out;
+  }
+  
+
+@keyframes typing {
+    from {
+      width: 0; 
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+ 
+  
+  
+ 
