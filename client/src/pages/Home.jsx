@@ -25,7 +25,6 @@ export default function Home() {
       if (trialCount < 2) {
         setIsPasscode("");
       } else {
-        alert("You've reached the maximum number of trials.");
         setIsFailBoxVisible(!isFailBoxVisible);
         setTrialCount(0);
       }
@@ -58,7 +57,7 @@ export default function Home() {
           </h3>
         </div>
 
-        <div className="relative w-full h-full z-0">
+        <div className="popup relative w-full h-full z-0">
           <div className="absolute h-full w-full">
             <img
               src={Envelope}
@@ -72,19 +71,19 @@ export default function Home() {
             </div>
           </Link>
           {isPopupVisible && (
-            <div className="popup absolute w-3/4 h-2/5 z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-white border-2 border-black ">
+            <div className="popup absolute w-3/4 h-1/2 z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-white border-2 border-black ">
               <div className=" px-3">
-                <h1 className=" text-center mt-3 text-red-500 font-bold">
+                <h1 className=" text-center mt-2 text-red-500 font-bold">
                   Not So Fast Princess <span className=" text-red-500">😍</span>{" "}
                 </h1>
-                <p className="  text-sm text-center">
+                <p className=" text-xs text-center">
                   {" "}
                   Before you can unwrap your beautiful gift, you have three
                   attempts to enter the passcode , P.S the passcode is a sinlge
                   word!{" "}
                 </p>
               </div>
-              <div className="w-1/2 mx-auto mt-3">
+              <div className="w-1/2 mx-auto mt-2 ">
                 <form onSubmit={trialHandler} className=" text-center">
                   <input
                     type="text"
@@ -92,12 +91,12 @@ export default function Home() {
                     required={true}
                     value={isPasscode}
                     onChange={handleInputChange}
-                    className="border-red border-2 w-full text-center text- rounded-lg"
+                    className="border-red border-2 w-full text-center text-sm rounded-lg"
                   />
                   <br />
                   <button
                     type="submit"
-                    className=" p-1 w-16 bg-red-400 mt-3 rounded-lg text-xs cursor-pointer hover:bg-red-500"
+                    className=" p-1 w-16 bg-red-400 mt-2 rounded-lg text-xs cursor-pointer hover:bg-red-500"
                   >
                     Enter
                   </button>
@@ -114,7 +113,7 @@ export default function Home() {
           {isPassBoxVisible && (
             <div
               id="passbox"
-              className="popup absolute w-3/4 h-2/5 z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-white border-2 border-black "
+              className="popup absolute w-3/4 h-1/2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-white border-2 border-black "
             >
               <diV className=" p-3 text-center">
                 <h1 className=" text-red-500  mb-2 text-lg">
@@ -135,20 +134,26 @@ export default function Home() {
           {isFailBoxVisible && (
             <div
               id="failbox"
-              className="popup absolute w-3/4 h-2/5 z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-white border-2 border-black "
+              className="popup absolute w-3/4 h-1/2 z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-white border-2 border-black "
             >
               {" "}
               <diV className=" p-3 text-center">
-                <h1 className=" text-red-500 text-center mb-2">
+                <h1 className=" text-red-500 text-center mb-2 text-sm sm:text-base">
                   Oh No! You have Failed 😞
                 </h1>
-                <p className=" text-center text-sm">
+                <p className=" text-center text-xs sm:text-sm">
                   Dont Worry Babes You can Still get your Gift LOL. You Just
-                  need to Pass this Trivia Questions ! Its Only Like 10
-                  Questions About us.
+                  need to Pass this Trivia Questions ! Its 6 Questions. Ps.{" "}
+                  <span className=" font-bold">
+                    The first letter of each answer is a letter from the
+                    passcode so remember it.
+                  </span>
                 </p>
-                <div className=" mt-7 text-sm w-24 rounded-full mx-auto  p-2 bg-red-400 hover:bg-red-500 cursor-pointer ">
-                  <a onClick={handletriviadisplay} className="heart-button   ">
+                <div className=" mt-5 text-sm w-24 rounded-full mx-auto  p-1 sm:p-2 bg-red-400 hover:bg-red-500 cursor-pointer ">
+                  <a
+                    onClick={handletriviadisplay}
+                    className="heart-button  text-xs sm:text-sm  "
+                  >
                     {" "}
                     Start Trivia
                   </a>

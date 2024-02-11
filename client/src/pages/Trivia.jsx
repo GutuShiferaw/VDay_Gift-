@@ -3,14 +3,25 @@ import React, { useState } from "react";
 const Trivia = () => {
   const questions = [
     {
-      question: "What is the capital of France?",
-      options: ["Paris", "London", "Berlin", "Madrid"],
-      answer: "Paris",
+      question:
+        "On a casual Night out Malet new, Yet Binhed Imertalew to Get Food? ",
+      options: ["McDonalds", "Pop-Eyes", "Menge Bet", "Subway"],
+      answer: "McDonalds",
     },
     {
-      question: "Which planet is known as the Red Planet?",
-      options: ["Earth", "Mars", "Venus", "Jupiter"],
-      answer: "Mars",
+      question: "Stupid ______ Nigga!",
+      options: ["Funny", "Looking", "Ass", "Dumb"],
+      answer: "Ass",
+    },
+    {
+      question: "Which Part of the Day do we Both hate the Most?",
+      options: ["Night", "Morning", "Evening", "Afternoon"],
+      answer: "Morning",
+    },
+    {
+      question: "Say we Had a Son, What would we Name this Kid?",
+      options: ["John", "Samson", "Amensisa", "kaleb"],
+      answer: "Amensisa",
     },
   ];
 
@@ -67,9 +78,17 @@ const Trivia = () => {
         </div>
       ) : (
         <div>
-          <h2 className="text-2xl font-bold mb-4">Trivia Completed!</h2>
+          <h2 className="text-xl font-bold mb-2">Trivia Completed!</h2>
           <p className="text-lg">
             Your Score: {score} out of {questions.length}
+          </p>
+          <p className=" font-bold mb-2">
+            Okay baby since you answered all the questions here is your
+            Password: <span className=" font-bold text-red-500"> Mammaye</span>{" "}
+            <br></br> <br></br>
+            <a href="/" className=" underline text-blue-700 mt-4">
+              Go Back to your Gift
+            </a>
           </p>
         </div>
       )}
