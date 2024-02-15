@@ -123,7 +123,7 @@ export default function Home() {
                   Click the button to Access Your Gift
                 </p>
                 <div className=" mt-7 text-sm w-24 rounded-full mx-auto  p-2 bg-red-400 hover:bg-red-500 ">
-                  <a href="#" className="heart-button   ">
+                  <a href="/gift" className="heart-button   ">
                     {" "}
                     Your Gift
                   </a>

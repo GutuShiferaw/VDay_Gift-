@@ -23,6 +23,21 @@ const Trivia = () => {
       options: ["John", "Samson", "Amensisa", "kaleb"],
       answer: "Amensisa",
     },
+    {
+      question: "Who is my favourite artist?",
+      options: [
+        "Dagne Walle",
+        "Haachaluu Hundesaa",
+        "NBA Young Boy",
+        "Kuku Sebsibe",
+      ],
+      answer: "Dagne Walle",
+    },
+    {
+      question: "Where did we first kiss?",
+      options: ["Washroom", "Car", "Outside", "We never kissed"],
+      answer: "Car",
+    },
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -82,14 +97,23 @@ const Trivia = () => {
           <p className="text-lg">
             Your Score: {score} out of {questions.length}
           </p>
-          <p className=" font-bold mb-2">
-            Okay baby since you answered all the questions here is your
-            Password: <span className=" font-bold text-red-500"> Mammaye</span>{" "}
-            <br></br> <br></br>
-            <a href="/" className=" underline text-blue-700 mt-4">
-              Go Back to your Gift
-            </a>
-          </p>
+          {score === questions.length && (
+            <p className="font-bold mb-2">
+              Okay baby since you answered all the questions here is your
+              Password: <span className="font-bold text-red-500"> Mammaye</span>
+              <br></br> <br></br>
+            </p>
+          )}
+          {score < questions.length && (
+            <p>
+              {" "}
+              I can't believe you failed baby yigermal now go back and try again
+              dummy.{" "}
+            </p>
+          )}
+          <a href="/" className=" underline text-blue-700 mt-4">
+            Go Back to your Gift
+          </a>
         </div>
       )}
     </div>

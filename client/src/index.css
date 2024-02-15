@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.home-cont {
+.home-cont{
     background-image: url('./assets/images/background.png') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.gift-cont {
+  background-image: url('./assets/images/background.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.video-window {
+  width: 55%; /* Adjust the width as needed */
+   /* Set a maximum width if necessary */
+  height: 65vh; /* Adjust the height as needed */
+  background-color: #333; /* Set a background color */
+  /* Add any additional styling you want */
 }
 
 .typing-text {
